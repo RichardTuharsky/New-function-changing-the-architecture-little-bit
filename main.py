@@ -43,7 +43,6 @@ from tkinter.ttk import *
 
 master = Tk("Kniznica")
 master.wm_title("Kniznica")
-
 master.geometry("400x400")
 
 
@@ -53,16 +52,10 @@ label.pack(pady = 10)
 def openNewWindow():
 
 	newWindow = Toplevel(master)
-
-
 	newWindow.title("Knihy")
-  
 	newWindow.geometry("400x400")
-
-	
 	Label(newWindow,text ="Tu mozte najst informacie o knihach").pack()
   	
-
 
 btn = Button(master,text ="Informacie o knihach",command = openNewWindow)  
 btn.pack(pady = 10)
@@ -70,23 +63,15 @@ btn.pack(pady = 10)
 def openNewWindow():
     
 	newWindow = Toplevel(master)
-
-
 	newWindow.title("Knihy")
-  
 	newWindow.geometry("400x400")
-
-	
 	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi").pack()
 
 btn = Button(master, text ="Informacie o uzivatelovi",command = openNewWindow)           
 btn.pack(pady = 10)
 
 
-
 mainloop()
-
-
 
 window.mainloop()
 
