@@ -27,9 +27,6 @@ ent2.grid(row = 0, column = 4)
 listb = Listbox(window, height=6, width=35)
 listb.grid(row=2, column=0, rowspan=6, columnspan=2)
 
-#scrollbar
-sb = Scrollbar(window)
-sb.grid(row=2, column=2, rowspan=6, columnspan=2)
 
 listb.configure(yscrollcommand=sb.set)
 sb.configure(command=listb.yview)
@@ -50,6 +47,9 @@ master.wm_title("Kniznica")
 master.geometry("400x400")
 
 
+label = Label(master,text ="Dobry den, vytajte v nasej miestnej kniznici.")         
+label.pack(pady = 10)
+
 def openNewWindow():
 
 	newWindow = Toplevel(master)
@@ -59,25 +59,29 @@ def openNewWindow():
   
 	newWindow.geometry("400x400")
 
-	Label(newWindow,
-		text ="Tu mozte najst informacie o knihach").pack()
+	
+	Label(newWindow,text ="Tu mozte najst informacie o knihach").pack()
+  	
 
 
-label = Label(master,
-			text ="Dobry den, vytajte v nasej miestnej kniznici.")         
-            
-        
-label.pack(pady = 10)
-
-btn = Button(master,
-			text ="Informacie o uzivatelovi",
-			command = openNewWindow)   
+btn = Button(master,text ="Informacie o knihach",command = openNewWindow)  
 btn.pack(pady = 10)
 
-btn = Button(master,
-		    text ="Informacie o knihach",
-			command = openNewWindow)           
+def openNewWindow():
+    
+	newWindow = Toplevel(master)
+
+
+	newWindow.title("Knihy")
+  
+	newWindow.geometry("400x400")
+
+	
+	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi").pack()
+
+btn = Button(master, text ="Informacie o uzivatelovi",command = openNewWindow)           
 btn.pack(pady = 10)
+
 
 
 mainloop()
