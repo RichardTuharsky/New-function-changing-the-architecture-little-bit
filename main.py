@@ -54,11 +54,10 @@ def openNewWindow():
 	newWindow = Toplevel(master)
 	newWindow.title("Knihy")
 	newWindow.geometry("400x400")
-	Label(newWindow,text ="Tu mozte najst informacie o knihach").pack()
-  	
-
+	Label(newWindow,text ="Tu mozte najst informacie o knihach").pack() 	
+	
 btn = Button(master,text ="Informacie o knihach",command = openNewWindow)  
-btn.pack(pady = 10)
+btn.pack(pady = 18)
 
 def openNewWindow():
     
@@ -66,9 +65,9 @@ def openNewWindow():
 	newWindow.title("Knihy")
 	newWindow.geometry("400x400")
 	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi").pack()
-
+	
 btn = Button(master, text ="Informacie o uzivatelovi",command = openNewWindow)           
-btn.pack(pady = 10)
+btn.pack(pady = 18)
 
 
 mainloop()
