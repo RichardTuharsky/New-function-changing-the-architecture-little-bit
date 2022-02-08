@@ -1,3 +1,4 @@
+from cgitb import text
 from tkinter import *
 import backend
 
@@ -54,7 +55,12 @@ def openNewWindow():
 	newWindow = Toplevel(master)
 	newWindow.title("Knihy")
 	newWindow.geometry("400x400")
-	Label(newWindow,text ="Tu mozte najst informacie o knihach").pack() 	
+	Label(newWindow,text ="Tu mozte najst informacie o knihach",width=20).pack() 
+	Button(newWindow,text ="Spusti kniznicu",width=20).pack()
+	Button(newWindow,text ="Vyhladaj novu knihu",width=20).pack()
+	Button(newWindow,text ="Vymaz knihu",width=20).pack()
+	Button(newWindow,text ="Zadaj novu knihu",width=20).pack()
+	Button(newWindow,text ="Vrat knihu do kniznice",width=20).pack()	
 	
 btn = Button(master,text ="Informacie o knihach",command = openNewWindow)  
 btn.pack(pady = 18)
@@ -64,7 +70,11 @@ def openNewWindow():
 	newWindow = Toplevel(master)
 	newWindow.title("Knihy")
 	newWindow.geometry("400x400")
-	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi").pack()
+	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi",width=20).pack()
+	Button(newWindow,text ="Vytvor noveho uzivatela",width=20).pack()
+	Button(newWindow,text ="Vymaz uzivatela",width=20).pack()
+	Button(newWindow,text ="Zoznam uzivatelov",width=20).pack()
+	Button(newWindow,text ="Vyhladavanie uzivatela",width=20).pack()
 	
 btn = Button(master, text ="Informacie o uzivatelovi",command = openNewWindow)           
 btn.pack(pady = 18)
