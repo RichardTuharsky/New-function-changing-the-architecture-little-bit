@@ -22,7 +22,7 @@ def openNewWindow():
 
 	newWindow = Toplevel(master)
 	newWindow.title("Knihy")
-	newWindow.geometry("500x400")
+	newWindow.geometry("650x400")
 	l1 = Label(newWindow, text = "Vymaz knihu")
 	l1.grid(row=0, column=3)
 	vymaz_knihu = StringVar()
@@ -33,7 +33,7 @@ def openNewWindow():
 	ent1.grid(row = 0, column = 10)
 	vymaz_knihu = StringVar()
 	ent1 = Entry(newWindow, textvariable = vymaz_knihu)
-	ent1.grid(row = 0, column = 15)
+	ent1.grid(row = 0, column = 13)
 	l1 = Label(newWindow, text = "Zadaj novu knihu")
 	l1.grid(row=5, column=3)
 	zadaj_novu_knihu = StringVar()
@@ -44,7 +44,7 @@ def openNewWindow():
 	ent1.grid(row = 5, column = 10)
 	zadaj_novu_knihu = StringVar()
 	ent1 = Entry(newWindow, textvariable = zadaj_novu_knihu)
-	ent1.grid(row = 5, column = 15)
+	ent1.grid(row = 5, column = 13)
 	l1 = Label(newWindow, text = "Vyhladaj knihu")
 	l1.grid(row=10, column=3)
 	vyhladaj_knihu = StringVar()
@@ -55,7 +55,16 @@ def openNewWindow():
 	ent1.grid(row = 10, column = 10)
 	vyhladaj_knihu = StringVar()
 	ent1 = Entry(newWindow, textvariable = vyhladaj_knihu)
-	ent1.grid(row = 10, column = 15)
+	ent1.grid(row = 10, column = 13)
+	l1 = Label(newWindow, text = "Zoznam knih")
+	l1.grid(row=25, column=3)
+	zoznam_uloh = StringVar()
+	ent1 = Entry(newWindow, textvariable = zoznam_uloh)
+	ent1.grid(row = 25, column = 4)
+	sb = Scrollbar(newWindow)
+	sb.grid(row=24, column=9, rowspan=6, columnspan=4)
+	listb = Listbox(newWindow, height=6, width=35)
+	listb.grid(row=23, column=10, rowspan=6, columnspan=2)
 	
 
 
@@ -68,19 +77,45 @@ def openNewWindow():
     
 	newWindow = Toplevel(master)
 	newWindow.title("Uzivatel")
-	newWindow.geometry("400x400")
-	Label(newWindow,text ="Tu mozte najst informacie o uzivatelovi",width=35).pack()
-	Button(newWindow,text ="Vytvor noveho uzivatela",width=21).pack()
-	Button(newWindow,text ="Vymaz uzivatela",width=20).pack()
-	Button(newWindow,text ="Zoznam uzivatelov",width=20).pack()
-	Button(newWindow,text ="Vyhladavanie uzivatela",width=20).pack()
+	newWindow.geometry("650x400")
+	l1 = Label(newWindow, text = "Vymaz uzivatela")
+	l1.grid(row=0, column=3)
+	vymaz_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vymaz_uzivatela)
+	ent1.grid(row = 0, column = 4)
+	vymaz_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vymaz_uzivatela)
+	ent1.grid(row = 0, column = 10)
+	l1 = Label(newWindow, text = "Vytvor noveho uzivatela")
+	l1.grid(row=5, column=3)
+	vytvor_noveho_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vytvor_noveho_uzivatela)
+	ent1.grid(row = 5, column = 4)
+	vytvor_noveho_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vytvor_noveho_uzivatela)
+	ent1.grid(row = 5, column = 10)
+	l1 = Label(newWindow, text = "Vyhladaj uzivatela")
+	l1.grid(row=10, column=3)
+	vyhladaj_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vyhladaj_uzivatela)
+	ent1.grid(row = 10, column = 4)
+	vyhladaj_uzivatela = StringVar()
+	ent1 = Entry(newWindow, textvariable = vyhladaj_uzivatela)
+	ent1.grid(row = 10, column = 10)
+	l1 = Label(newWindow, text = "Zoznam uzivatelov")
+	l1.grid(row=25, column=3)
+	sb = Scrollbar(newWindow)
+	sb.grid(row=24, column=8, rowspan=6, columnspan=2)
+	listb = Listbox(newWindow, height=6, width=35)
+	listb.grid(row=23, column=4, rowspan=6, columnspan=2)
+	
+	
 	
 btn = Button(master, text ="Informacie o uzivatelovi",command = openNewWindow)           
 btn.pack(pady = 18)
 
 
 mainloop()
-
 
 
 	
